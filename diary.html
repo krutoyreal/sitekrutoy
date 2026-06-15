@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="D:\site2\css\main.css">
+    <title>Хирургический центр ортопедии и трансплантологии</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Дневник</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="login.html">Логин</a>
+        <a href="main.html">Мой план</a>
+        <a href="exercise.html">Упражнения</a>
+        <a href="diary.html">Дневник</a>
+        <a href="doctor.html">Врачи</a>
+        <a href="help.html">Справка</a>
+    </nav>
+     <section id="diary" class="section">
+            <h2>Дневник самочувствия</h2>
+
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label>Дата и время</label>
+                    <input type="datetime-local">
+                </div>
+                <div class="form-group">
+                    <label>Уровень боли (1–10)</label>
+                    <input type="range" min="1" max="10" value="3">
+                </div>
+                <div class="form-group">
+                    <label>Отёчность</label>
+                    <select>
+                        <option>Отсутствует</option>
+                        <option>Лёгкая</option>
+                        <option>Умеренная</option>
+                        <option>Сильная</option>
+                    </select>
+                    <div class="form-group">
+                    <label for="username">Описать самочувствие</label>
+                    <input type="text">
+                    <button type="submit">Cохранить</button>
+                </div>
+        </section>
+
+
+<script>
+ document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+ e.preventDefault();
+ alert('Запись сохранилась');
+ this.reset();
+});
+</script>
